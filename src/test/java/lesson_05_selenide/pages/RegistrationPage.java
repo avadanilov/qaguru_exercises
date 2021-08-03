@@ -1,7 +1,7 @@
-package pages;
+package lesson_05_selenide.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import components.Calendar;
+import lesson_05_selenide.components.Calendar;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
