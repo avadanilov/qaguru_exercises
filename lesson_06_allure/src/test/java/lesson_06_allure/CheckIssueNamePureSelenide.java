@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
 import static org.openqa.selenium.By.partialLinkText;
 
-public class CheckIssueName_PureSelenide {
+public class CheckIssueNamePureSelenide {
 
     private static final String REPOSITORY = "eroshenkoam/allure-example";
     private static final int ISSUE_NUMBER = 68;
@@ -21,7 +21,6 @@ public class CheckIssueName_PureSelenide {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         open("https://github.com");
-        $(".header-search-input").click();
         $(".header-search-input").val(REPOSITORY).submit();
         $(linkText(REPOSITORY)).click();
         $(partialLinkText("Issues")).click();

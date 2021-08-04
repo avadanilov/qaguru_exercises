@@ -9,29 +9,28 @@ import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
 import static org.openqa.selenium.By.partialLinkText;
 
-public class CheckIssues_WebSteps {
+public class CheckIssuesWebSteps {
 
     @Step("Открываем главную страницу")
-    public CheckIssues_WebSteps openMainPage() {
+    public CheckIssuesWebSteps openMainPage() {
         open("https://github.com");
         return this;
     }
 
     @Step("Ищем репозиторий [{repository}]")
-    public CheckIssues_WebSteps searchForRepository(String repository) {
-        $(".header-search-input").click();
+    public CheckIssuesWebSteps searchForRepository(String repository) {
         $(".header-search-input").val(repository).submit();
         return this;
     }
 
     @Step("Переходим в репозиторий [{repository}]")
-    public CheckIssues_WebSteps goToRepository(String repository) {
+    public CheckIssuesWebSteps goToRepository(String repository) {
         $(linkText(repository)).click();
         return this;
     }
 
     @Step("Переходим в раздел Issues")
-    public CheckIssues_WebSteps openIssuesTab() {
+    public CheckIssuesWebSteps openIssuesTab() {
         $(partialLinkText("Issues")).click();
         return this;
     }

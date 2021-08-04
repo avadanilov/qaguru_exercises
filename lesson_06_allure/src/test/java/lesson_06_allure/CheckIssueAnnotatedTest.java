@@ -2,12 +2,12 @@ package lesson_06_allure;
 
 import org.junit.jupiter.api.Test;
 
-public class CheckIssue_AnnotatedTest {
+public class CheckIssueAnnotatedTest {
 
     private static final String REPOSITORY = "eroshenkoam/allure-example";
     private static final int ISSUE_NUMBER = 68;
 
-    private CheckIssues_WebSteps steps = new CheckIssues_WebSteps();
+    private final CheckIssuesWebSteps steps = new CheckIssuesWebSteps();
 
     @Test
     public void shouldSeeIssueInRepository() {
