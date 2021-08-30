@@ -1,10 +1,10 @@
 package lesson_05_selenide;
 
 import com.codeborne.selenide.Configuration;
+import com.github.javafaker.Faker;
+import lesson_05_selenide.pages.RegistrationPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import lesson_05_selenide.pages.RegistrationPage;
-import com.github.javafaker.Faker;
 
 public class PracticeFormWithPOTests {
     RegistrationPage registrationPage = new RegistrationPage();
